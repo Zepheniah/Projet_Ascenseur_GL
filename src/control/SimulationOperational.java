@@ -53,6 +53,7 @@ public class SimulationOperational implements OperationalCommand, ActionListener
                 break;
         }
         if(stopNext) {
+            stopNext = false;
             direction = Direction.NONE;
             state.setText("STOP");
         }

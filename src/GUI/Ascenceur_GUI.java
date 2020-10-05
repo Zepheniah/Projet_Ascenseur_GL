@@ -9,6 +9,8 @@ import control.command.FloorRequest;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.TreeSet;
 
 public class Ascenceur_GUI {
@@ -41,10 +43,17 @@ public class Ascenceur_GUI {
         gui.add(new Label());
         gui.add(ARRETURGENCEButton = new JButton("Force STOP"));
         SimulationOperational simulationOperational = new SimulationOperational(state, currentPosition, 0, null);
-        CommandControl commandControl = new ImplCommandControl(0, new TreeSet<>(new Sort()),simulationOperational);
+        CommandControl commandControl = new ImplCommandControl(0, new TreeSet<>(new Sort()), simulationOperational);
         simulationOperational.setCommandControl(commandControl);
 
-        commandControl.addFloorRequest(new FloorRequest(Direction.UP,10));
+        ValidStageUpButton.addActionListener((e) -> {
+            commandControl.addFloorRequest(new FloorRequest(Direction.UP, (Integer) floor.getValue()));
+        });
+
+        ValidStageDownButton.addActionListener((e) -> {
+            commandControl.addFloorRequest(new FloorRequest(Direction.DOWN, (Integer) floor.getValue()));
+        });
+
         new Timer(500, simulationOperational).start();
     }
 

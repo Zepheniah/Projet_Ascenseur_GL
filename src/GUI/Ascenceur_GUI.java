@@ -2,6 +2,9 @@ package GUI;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Collections;
+import java.util.Queue;
+import java.util.TreeSet;
 
 public class Ascenceur_GUI {
     private JTextField currentPosition;
@@ -30,7 +33,14 @@ public class Ascenceur_GUI {
         gui.add(new Label());
         gui.add(ARRETURGENCEButton = new JButton("Force STOP"));
     }
+
     public static void main(String[] args) {
+        TreeSet<Integer> test = new TreeSet<>();
+        for (int i = 0; i < 20; i++) {
+            test.add((int)(Math.random()*100));
+        }
+        System.out.println(test);
+
         JFrame frame = new JFrame("Ascenceur_GUI");
         Ascenceur_GUI gui = new Ascenceur_GUI(0, 3);
         frame.setContentPane(gui.gui);

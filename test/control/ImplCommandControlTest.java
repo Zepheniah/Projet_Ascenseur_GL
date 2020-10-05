@@ -85,5 +85,16 @@ class ImplCommandControlTest {
         verify(operationalCommand, times(1)).up();
         verify(operationalCommand, never()).emergencyBreak();
         verify(operationalCommand, times(1)).stopNextFloor();
+
+        for (int i = -8; i < 9; i++) {
+            control.reachFloor(i);
+            verify(operationalCommand, times(1)).stopNextFloor();
+        }
+
+        control.reachFloor(9);
+        verify(operationalCommand, times(1)).down();
+        verify(operationalCommand, times(1)).up();
+        verify(operationalCommand, never()).emergencyBreak();
+        verify(operationalCommand, times(2)).stopNextFloor();
     }
 }

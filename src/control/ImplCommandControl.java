@@ -37,12 +37,15 @@ public class ImplCommandControl implements CommandControl {
 
     @Override
     public void reachFloor(int floor) {
-        FloorRequest floorRequest = commands.first();
-        if (Math.abs(floor - this.floor) > 1) {
-            emergencyBreak(new EmergencyBrake());
-            System.err.println("Skip reach signal of floor " + (this.floor + 1) + " to " + (floor - 1));
+        if(!commands.isEmpty()) {
+            FloorRequest floorRequest = commands.first();
+            int oldFloor = this.floor;
+            this.floor = floor;
+            if (Math.abs(floor - oldFloor) > 1) {
+                emergencyBreak(new EmergencyBrake());
+                System.err.println("Skip reach signal of floor " + (this.floor + 1) + " to " + (floor - 1));
+            }
         }
-        this.floor = floor;
         evaluateCommand();
     }
 

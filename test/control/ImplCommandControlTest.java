@@ -1,6 +1,5 @@
 package control;
 
-import algorithme.NearestFloor;
 import control.algorithm.Sort;
 import control.command.Direction;
 import control.command.FloorRequest;

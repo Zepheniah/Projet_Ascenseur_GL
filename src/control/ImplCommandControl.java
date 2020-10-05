@@ -11,6 +11,14 @@ import java.util.TreeSet;
 import java.util.function.Function;
 
 public class ImplCommandControl implements CommandControl {
+    public ImplCommandControl(int floor, OperationalCommand operationalCommand) {
+        this.floor = floor;
+        this.commands = commands;
+        this.operationalCommand = operationalCommand;
+        this.enable = true;
+        this.direction = Direction.NONE;
+    }
+
     public ImplCommandControl(int floor, NavigableSet<FloorRequest> commands, OperationalCommand operationalCommand) {
         this.floor = floor;
         this.commands = commands;
@@ -40,22 +48,24 @@ public class ImplCommandControl implements CommandControl {
 
     @Override
     public void addFloorRequest(FloorRequest floorRequest) {
-        if(!enable)
+        if (!enable)
             return;
         commands.add(floorRequest);
         evaluateCommand();
     }
 
     private void evaluateCommand() {
+        if (commands.isEmpty())
+            return;
         FloorRequest floorRequest = commands.first();
         Direction floorDirection = CommandControl.floorDirection(floor, floorRequest.getFloor());
-        if(CommandControl.isNextStop(this.floor, floorRequest.getFloor())) {
-            if(!floorDirection.equals(direction))
+        if (CommandControl.isNextStop(this.floor, floorRequest.getFloor())) {
+            if (!floorDirection.equals(direction))
                 setDirection(floorDirection);
             setDirection(Direction.NONE);
             commands.pollFirst();
-        }
-        else if(!floorDirection.equals(direction))
+            evaluateCommand();
+        } else if (!floorDirection.equals(direction))
             setDirection(floorDirection);
     }
 

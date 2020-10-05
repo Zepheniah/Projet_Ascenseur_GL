@@ -1,11 +1,11 @@
 package control.algorithm;
 
 import java.util.Comparator;
-import control.Command.FloorRequest;
+import control.command.FloorRequest;
 
-public class Sort implements Comparator{
+public class Sort implements Comparator<FloorRequest>{
 
-	public sortRequest(FloorRequest floor1, FloorRequest floor2){
-		return (floor1 > floor2)? floor1 : floor2;
+	public int compare(FloorRequest floor1, FloorRequest floor2){
+		return floor1.getFloor() - floor2.getFloor();
 	}
 }

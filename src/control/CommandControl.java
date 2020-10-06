@@ -1,6 +1,7 @@
 package control;
 
 
+import control.command.Acquit;
 import control.command.Direction;
 import control.command.EmergencyBrake;
 import control.command.FloorRequest;
@@ -17,6 +18,7 @@ public interface CommandControl {
     void reachFloor(int floor);
     void addFloorRequest(FloorRequest floor);
     void emergencyBreak(EmergencyBrake emergencyBrake);
+    void acquit(Acquit acquit);
 
     int getFloor();
     Direction getDirection();

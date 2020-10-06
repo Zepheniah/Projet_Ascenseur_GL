@@ -1,4 +1,7 @@
 package control;
+/**
+ * @classe Class permettant d'adapter le GUI en fonction des actions de l'utilisateur
+ */
 
 import control.command.Direction;
 
@@ -20,6 +23,11 @@ public class SimulationOperational implements OperationalCommand, ActionListener
     public void emergencyBreak() {
         direction = Direction.NONE;
         state.setText("EMERGENCY BREAK");
+    }
+    @Override
+    public void acquit(){
+        direction = Direction.NONE;
+        state.setText("Remise en marche effectué");
     }
 
     @Override

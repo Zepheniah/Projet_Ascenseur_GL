@@ -1,5 +1,9 @@
 package control;
+/**
+ * @brief Classe gérant les differentes actions lié au bouton présent sur le GUI
+ */
 
+import control.command.Acquit;
 import control.command.Direction;
 import control.command.EmergencyBrake;
 import control.command.FloorRequest;
@@ -46,6 +50,12 @@ public class ImplCommandControl implements CommandControl {
         evaluateCommand();
     }
 
+    /**
+     * Si la requete est valide,la requete est ajouté à la liste des étages demandé
+     * Une requete est consideré comme valide si l'ascenseur n'est pas dans l'état arret d'urgence
+     * et que l'ascenseur n'est pas deja à l'étage demandé.
+     * @param floorRequest Etage demandé par l'utilisateur
+     */
     @Override
     public void addFloorRequest(FloorRequest floorRequest) {
         if (!enable || (floor==floorRequest.getFloor() && direction==Direction.NONE))
@@ -84,12 +94,28 @@ public class ImplCommandControl implements CommandControl {
         }
     }
 
+    /**
+     * Bloque l'ascenseur empechant tout mouvement jusqu'a qu'il soit acquitté par acquit
+     * Vide la liste d'attente des requetes
+     */
     @Override
     public void emergencyBreak(EmergencyBrake emergencyBrake) {
         operationalCommand.emergencyBreak();
         commands.clear();
         this.direction = Direction.NONE;
         setEnable(false);
+    }
+
+    /**
+     * Debloque l'ascenseur
+     *
+     */
+    @Override
+    public void acquit(Acquit acquit){
+        operationalCommand.acquit();
+        commands.clear();
+        this.direction = Direction.NONE;
+        setEnable(true);
     }
 
     @Override
@@ -110,9 +136,9 @@ public class ImplCommandControl implements CommandControl {
         this.commands = commands;
     }
 
-    private boolean enable;
-    private int floor;
-    private Direction direction;
-    private NavigableSet<FloorRequest> commands;
-    private final OperationalCommand operationalCommand;
+    private boolean enable; //!< Booléen permettant de bloquer ou débloqué l'ascenseur
+    private int floor;//!< Etage où se trouve l'ascenseur
+    private Direction direction;//!< Le sens dans lequel va l'ascenseur
+    private NavigableSet<FloorRequest> commands;//! Liste des differentes requete d'étage
+    private final OperationalCommand operationalCommand;//!< L'action demandé par l'utilisateur @ref command
 }

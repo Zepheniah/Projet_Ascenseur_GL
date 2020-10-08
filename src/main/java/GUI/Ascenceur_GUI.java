@@ -59,7 +59,7 @@ public class Ascenceur_GUI {
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("Ascenceur_GUI");
-        Ascenceur_GUI gui = new Ascenceur_GUI(0, 3);
+        Ascenceur_GUI gui = new Ascenceur_GUI(-1, 10);
         frame.setContentPane(gui.gui);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();

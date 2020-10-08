@@ -65,8 +65,8 @@ public class SimulationOperational implements OperationalCommand, ActionListener
         this.commandControl = commandControl;
     }
 
-    private JTextField state;
-    private JTextField floor;
+    private final JTextField state;
+    private final JTextField floor;
     private int numFloor;
     private Direction direction;
     private boolean stopNext;

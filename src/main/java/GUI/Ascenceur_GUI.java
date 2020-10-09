@@ -21,10 +21,9 @@ public class Ascenceur_GUI {
     private JTextField currentPosition;
     private JTextField state;
     private JSpinner floor;
-    private JButton ValidStageUpButton;
-    private JButton ValidStageDownButton;
+    private JButton ValidStageButton;
     private JButton ARRETURGENCEButton;
-    private JButton Acquitte;
+    private JButton acquit;
     private JPanel gui;
 
     /**
@@ -51,15 +50,14 @@ public class Ascenceur_GUI {
 
     /**
      * Initialisation des bouton UP & DOWN et du selecteur d'étage.
-     * @param command Jpanel associé au bouton UP & DOWN et ainsi que l'entrée de l'étage demandé
      *
+     * @param command Jpanel associé au bouton UP & DOWN et ainsi que l'entrée de l'étage demandé
      */
-    private void init_command(JPanel command,int minFloor,int maxFloor){
+    private void init_command(JPanel command, int minFloor, int maxFloor) {
         command.setLayout(new FlowLayout());
         command.add(floor = new JSpinner(new SpinnerNumberModel(0, minFloor, maxFloor, 1)));
-        command.add(ValidStageUpButton = new JButton("UP"));
-        command.add(ValidStageDownButton = new JButton("DOWN"));
-        command.add(Acquitte = new JButton("Acquitte"));
+        command.add(ValidStageButton = new JButton("DEMAND"));
+        command.add(acquit = new JButton("Acquit"));
 
     }
 
@@ -91,23 +89,19 @@ public class Ascenceur_GUI {
      * @param commandControl
      */
     private void init_action_listener(CommandControl commandControl){
-        ValidStageUpButton.addActionListener((e) -> {
+        ValidStageButton.addActionListener((e) -> {
             commandControl.addFloorRequest(new FloorRequest(Direction.UP, (Integer) floor.getValue()));
         });
 
-        ValidStageDownButton.addActionListener((e) -> {
-            commandControl.addFloorRequest(new FloorRequest(Direction.DOWN, (Integer) floor.getValue()));
-        });
         ARRETURGENCEButton.addActionListener((e) ->{
             commandControl.emergencyBreak(new EmergencyBrake());
         } );
-        Acquitte.addActionListener((e) ->{
+        acquit.addActionListener((e) -> {
             commandControl.acquit(new Acquit());
         });
     }
 
     /**
-     *
      * Main lançant le programme
      */
     public static void main(String[] args) {

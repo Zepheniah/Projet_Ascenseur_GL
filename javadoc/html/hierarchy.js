@@ -15,6 +15,7 @@ var hierarchy =
       [ "control.SimulationOperational", "classcontrol_1_1_simulation_operational.html", null ]
     ] ],
     [ "Comparator", null, [
-      [ "control.algorithm.Sort", "classcontrol_1_1algorithm_1_1_sort.html", null ]
+      [ "control.algorithm.Sort", "classcontrol_1_1algorithm_1_1_sort.html", null ],
+      [ "control.algorithm.Sort2", "classcontrol_1_1algorithm_1_1_sort2.html", null ]
     ] ]
 ];

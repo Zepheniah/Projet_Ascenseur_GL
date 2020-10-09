@@ -13,6 +13,13 @@ public class Sort2 implements Comparator<FloorRequest> {
         this.commandControl = commandControl;
     }
 
+    /**
+     * Fonction permettant une ordonnancement des étages tel que l'ascenseur privilige les étages supérieur lorsqu'il monte
+     * il triera les étages du plus petit au plus grand et inversement.
+     * @param o1    Etage A
+     * @param o2    Etage B
+     * @return En fonction de la direction il retournera le plus petit ou le plus grand
+     */
     @Override
     public int compare(FloorRequest o1, FloorRequest o2) {
         Direction direction = commandControl.getDirection();

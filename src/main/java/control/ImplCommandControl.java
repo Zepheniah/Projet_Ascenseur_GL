@@ -10,9 +10,7 @@ import control.command.FloorRequest;
 
 import java.util.Comparator;
 import java.util.NavigableSet;
-import java.util.Queue;
 import java.util.TreeSet;
-import java.util.function.Function;
 
 public class ImplCommandControl implements CommandControl {
     public ImplCommandControl(int floor, OperationalCommand operationalCommand) {
@@ -45,7 +43,7 @@ public class ImplCommandControl implements CommandControl {
         this.floor = floor;
         if (Math.abs(floor - oldFloor) > 1) {
             emergencyBreak(new EmergencyBrake());
-            System.err.println("Skip reach signal of floor " + (this.floor + 1) + " to " + (floor - 1));
+            System.err.println("Skip reach signal of floor " + (oldFloor + 1) + " to " + (floor - 1));
         }
         evaluateCommand();
     }

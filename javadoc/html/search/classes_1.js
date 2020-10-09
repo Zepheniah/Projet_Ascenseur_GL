@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['commandcontrol',['CommandControl',['../interfacecontrol_1_1_command_control.html',1,'control']]],
-  ['comparateur',['Comparateur',['../class_comparateur.html',1,'']]]
+  ['commandcontrol',['CommandControl',['../interfacecontrol_1_1_command_control.html',1,'control']]]
 ];

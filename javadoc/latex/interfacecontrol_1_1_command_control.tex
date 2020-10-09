@@ -35,6 +35,11 @@ static boolean \mbox{\hyperlink{interfacecontrol_1_1_command_control_a4b2de21fec
 \subsubsection{\texorpdfstring{acquit()}{acquit()}}
 {\footnotesize\ttfamily void control.\+Command\+Control.\+acquit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcontrol_1_1command_1_1_acquit}{Acquit}}}]{acquit }\end{DoxyParamCaption})}
 
+Fonction débloquant l\textquotesingle{}ascenseur 
+\begin{DoxyParams}{Parameters}
+{\em acquit} & \\
+\hline
+\end{DoxyParams}
 
 
 Implemented in \mbox{\hyperlink{classcontrol_1_1_impl_command_control_a18ba4e8d7e7b6ebfec099c22f58d55d1}{control.\+Impl\+Command\+Control}}.
@@ -45,6 +50,11 @@ Implemented in \mbox{\hyperlink{classcontrol_1_1_impl_command_control_a18ba4e8d7
 \subsubsection{\texorpdfstring{addFloorRequest()}{addFloorRequest()}}
 {\footnotesize\ttfamily void control.\+Command\+Control.\+add\+Floor\+Request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcontrol_1_1command_1_1_floor_request}{Floor\+Request}}}]{floor }\end{DoxyParamCaption})}
 
+Ajoute une requete d\textquotesingle{}étage par l\textquotesingle{}utilisateur à la liste des requetes 
+\begin{DoxyParams}{Parameters}
+{\em floor} & Etage demandé par l\textquotesingle{}utilisateur \\
+\hline
+\end{DoxyParams}
 
 
 Implemented in \mbox{\hyperlink{classcontrol_1_1_impl_command_control_a992b195b4521cba044f235fa35f6a9b2}{control.\+Impl\+Command\+Control}}.
@@ -91,6 +101,16 @@ Implemented in \mbox{\hyperlink{classcontrol_1_1_impl_command_control_a03e231769
 \subsubsection{\texorpdfstring{isNextStop()}{isNextStop()}}
 {\footnotesize\ttfamily static boolean control.\+Command\+Control.\+is\+Next\+Stop (\begin{DoxyParamCaption}\item[{int}]{from,  }\item[{int}]{to }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+Verifie si les 2 étages passé en parametre sont consécutif 
+\begin{DoxyParams}{Parameters}
+{\em from} & Etage A \\
+\hline
+{\em to} & Etage B \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Si A et B sont consécutif return T\+R\+UE sinon False 
+\end{DoxyReturn}
 \mbox{\Hypertarget{interfacecontrol_1_1_command_control_aed88af210353f0e854d6da8af1089851}\label{interfacecontrol_1_1_command_control_aed88af210353f0e854d6da8af1089851}} 
 \index{control.CommandControl@{control.CommandControl}!reachFloor@{reachFloor}}
 \index{reachFloor@{reachFloor}!control.CommandControl@{control.CommandControl}}

@@ -1,9 +1,6 @@
 package control.command;
 
-import control.Command;
-import control.CommandHandler;
-
-public class FloorRequest implements Command {
+public class FloorRequest {
     public FloorRequest(Direction direction, int floor) {
         this.direction = direction;
         this.floor = floor;
@@ -19,9 +16,4 @@ public class FloorRequest implements Command {
 
     private final Direction direction;
     private final int floor;
-
-    @Override
-    public void accept(CommandHandler commandHandler) {
-        commandHandler.handle(this);
-    }
 }

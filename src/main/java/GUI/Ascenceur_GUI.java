@@ -7,7 +7,7 @@ package GUI;
 import control.CommandControl;
 import control.ImplCommandControl;
 import control.SimulationOperational;
-import control.algorithm.Sort;
+import control.algorithm.Sort2;
 import control.command.Acquit;
 import control.command.Direction;
 import control.command.EmergencyBrake;
@@ -15,8 +15,6 @@ import control.command.FloorRequest;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.TreeSet;
 
 public class Ascenceur_GUI {
@@ -39,15 +37,16 @@ public class Ascenceur_GUI {
 
         JPanel command = new JPanel();
         init_base_gui(command);
-        init_command(command,minFloor,maxFloor);
+        init_command(command, minFloor, maxFloor);
 
         SimulationOperational simulationOperational = new SimulationOperational(state, currentPosition, 0, null);
-        CommandControl commandControl = new ImplCommandControl(0, new TreeSet<>(new Sort()), simulationOperational);
+        ImplCommandControl commandControl = new ImplCommandControl(0, simulationOperational);
+        commandControl.setCommands(new TreeSet<>(new Sort2(commandControl)));
         simulationOperational.setCommandControl(commandControl);
 
         init_action_listener(commandControl);
 
-        new Timer(500, simulationOperational).start();
+        new Timer(1000, simulationOperational).start();
     }
 
     /**

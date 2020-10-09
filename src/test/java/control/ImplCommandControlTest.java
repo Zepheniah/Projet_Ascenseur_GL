@@ -1,12 +1,14 @@
 package control;
 
 import control.algorithm.Sort;
+import control.algorithm.Sort2;
 import control.command.Acquit;
 import control.command.Direction;
 import control.command.EmergencyBrake;
 import control.command.FloorRequest;
 import org.junit.jupiter.api.Test;
 
+import java.util.NavigableSet;
 import java.util.TreeSet;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -195,5 +197,21 @@ class ImplCommandControlTest {
         verify(operationalCommand, times(1)).down();
         verify(operationalCommand, times(2)).up();
         verify(operationalCommand, never()).emergencyBreak();
+    }
+
+    @Test
+    void test_sort2() {
+        OperationalCommand operationalCommand = mock(OperationalCommand.class);
+        ImplCommandControl control = new ImplCommandControl(0, operationalCommand);
+        NavigableSet<FloorRequest> req;
+        control.setCommands(req = new TreeSet<>(new Sort2(control)));
+
+        control.addFloorRequest(new FloorRequest(Direction.UP, 5));
+        control.addFloorRequest(new FloorRequest(Direction.UP, 1));
+        control.addFloorRequest(new FloorRequest(Direction.UP, 3));
+        control.addFloorRequest(new FloorRequest(Direction.UP, 6));
+        System.out.println(req);
+        control.addFloorRequest(new FloorRequest(Direction.UP, -1));
+        control.addFloorRequest(new FloorRequest(Direction.UP, -5));
     }
 }

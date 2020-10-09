@@ -16,6 +16,7 @@ public class SimulationOperational implements OperationalCommand, ActionListener
         this.numFloor = numFloor;
         this.commandControl = commandControl;
         direction = Direction.NONE;
+        directionQueue = Direction.NONE;
         stopNext = false;
     }
 
@@ -38,19 +39,27 @@ public class SimulationOperational implements OperationalCommand, ActionListener
 
     @Override
     public void up() {
-        direction = Direction.UP;
-        state.setText("GO UP");
+        if (stopNext)
+            directionQueue = Direction.UP;
+        else {
+            direction = Direction.UP;
+            state.setText("GO UP");
+        }
     }
 
     @Override
     public void down() {
-        direction = Direction.DOWN;
-        state.setText("GO DOWN");
+        if (stopNext)
+            directionQueue = Direction.DOWN;
+        else {
+            direction = Direction.DOWN;
+            state.setText("GO DOWN");
+        }
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        switch (direction){
+        switch (direction) {
             case DOWN:
                 --numFloor;
                 break;
@@ -62,8 +71,19 @@ public class SimulationOperational implements OperationalCommand, ActionListener
         }
         if(stopNext) {
             stopNext = false;
-            direction = Direction.NONE;
-            state.setText("STOP");
+            direction = directionQueue;
+            directionQueue = Direction.NONE;
+            switch (direction) {
+                case NONE:
+                    state.setText("STOP");
+                    break;
+                case DOWN:
+                    state.setText("GO DOWN");
+                    break;
+                case UP:
+                    state.setText("GO UP");
+                    break;
+            }
         }
         floor.setText(String.valueOf(numFloor));
         commandControl.reachFloor(numFloor);
@@ -77,6 +97,7 @@ public class SimulationOperational implements OperationalCommand, ActionListener
     private final JTextField floor; //!< Texte communiquant l'étage actuelle
     private int numFloor; //!< Etage actuelle
     private Direction direction;
+    private Direction directionQueue;
     private boolean stopNext;
     private CommandControl commandControl;
 }

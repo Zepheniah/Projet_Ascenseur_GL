@@ -37,6 +37,10 @@ public class ImplCommandControl implements CommandControl {
         this.direction = Direction.NONE;
     }
 
+    /**
+     * Fonction déclenchant le movement de l'ascenseur vers l'étage pris en parametre
+     * @param floor
+     */
     @Override
     public void reachFloor(int floor) {
         int oldFloor = this.floor;
@@ -76,6 +80,7 @@ public class ImplCommandControl implements CommandControl {
         } else if (!floorDirection.equals(direction))
             setDirection(floorDirection);
     }
+
 
     private void setDirection(Direction direction) {
         this.direction = direction;

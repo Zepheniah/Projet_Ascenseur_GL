@@ -94,8 +94,15 @@ $(document).ready(function(){initNavTree('classcontrol_1_1_impl_command_control.
 <div class="title">control.ImplCommandControl Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Inherits <a class="el" href="interfacecontrol_1_1_command_control.html">control.CommandControl</a>.</p>
+<div class="dynheader">
+Inheritance diagram for control.ImplCommandControl:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcontrol_1_1_impl_command_control.png" usemap="#control.ImplCommandControl_map" alt=""/>
+  <map id="control.ImplCommandControl_map" name="control.ImplCommandControl_map">
+<area href="interfacecontrol_1_1_command_control.html" alt="control.CommandControl" shape="rect" coords="0,0,173,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -143,7 +150,7 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:afc3d3dfd36511a07dd41e717df3b13f9"><td class="memItemLeft" align="right" valign="top">NavigableSet&lt; <a class="el" href="classcontrol_1_1command_1_1_floor_request.html">FloorRequest</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcontrol_1_1_impl_command_control.html#afc3d3dfd36511a07dd41e717df3b13f9">commands</a></td></tr>
 <tr class="separator:afc3d3dfd36511a07dd41e717df3b13f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbe2ee9057a11e4d2408947f5ff83cd5"><td class="memItemLeft" align="right" valign="top">final <a class="el" href="interfacecontrol_1_1_operational_command.html">OperationalCommand</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcontrol_1_1_impl_command_control.html#adbe2ee9057a11e4d2408947f5ff83cd5">operationalCommand</a></td></tr>
-<tr class="memdesc:adbe2ee9057a11e4d2408947f5ff83cd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">L'action demandé par l'utilisateur <a class="el" href="namespacecontrol_1_1command.html">command</a>.  <a href="#adbe2ee9057a11e4d2408947f5ff83cd5">More...</a><br /></td></tr>
+<tr class="memdesc:adbe2ee9057a11e4d2408947f5ff83cd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liste des differentes requete d'étage.  <a href="#adbe2ee9057a11e4d2408947f5ff83cd5">More...</a><br /></td></tr>
 <tr class="separator:adbe2ee9057a11e4d2408947f5ff83cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -267,6 +274,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Debloque l'ascenseur </p>
 
 <p>Implements <a class="el" href="interfacecontrol_1_1_command_control.html#a7eb9b7d638a4680fdf89453ca16a6c93">control.CommandControl</a>.</p>
 
@@ -287,6 +295,12 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Si la requete est valide,la requete est ajouté à la liste des étages demandé Une requete est consideré comme valide si l'ascenseur n'est pas dans l'état arret d'urgence et que l'ascenseur n'est pas deja à l'étage demandé. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">floorRequest</td><td>Etage demandé par l'utilisateur </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="interfacecontrol_1_1_command_control.html#addb1fea724cbd015456ac62a1dcf556d">control.CommandControl</a>.</p>
 
@@ -307,6 +321,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Bloque l'ascenseur empechant tout mouvement jusqu'a qu'il soit acquitté par acquit Vide la liste d'attente des requetes </p>
 
 <p>Implements <a class="el" href="interfacecontrol_1_1_command_control.html#a9a32457770712105c8ceffab1c05b95a">control.CommandControl</a>.</p>
 
@@ -572,7 +587,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>L'action demandé par l'utilisateur <a class="el" href="namespacecontrol_1_1command.html">command</a>. </p>
+<p>Liste des differentes requete d'étage. </p>
+<p>L'action demandé par l'utilisateur <a class="el" href="namespacecontrol_1_1command.html">command</a> </p>
 
 </div>
 </div>

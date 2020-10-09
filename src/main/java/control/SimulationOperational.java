@@ -1,6 +1,6 @@
 package control;
 /**
- * @classe Class permettant d'adapter le GUI en fonction des actions de l'utilisateur
+ * @classe SimulationOperational permettant d'adapter le GUI en fonction des actions de l'utilisateur
  */
 
 import control.command.Direction;
@@ -73,9 +73,9 @@ public class SimulationOperational implements OperationalCommand, ActionListener
         this.commandControl = commandControl;
     }
 
-    private final JTextField state;
-    private final JTextField floor;
-    private int numFloor;
+    private final JTextField state; //!< Text qui sera affiché pour communiquer l'état de l'ascenseur
+    private final JTextField floor; //!< Texte communiquant l'étage actuelle
+    private int numFloor; //!< Etage actuelle
     private Direction direction;
     private boolean stopNext;
     private CommandControl commandControl;

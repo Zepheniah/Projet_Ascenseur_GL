@@ -1,0 +1,158 @@
+\hypertarget{classcontrol_1_1_simulation_operational}{}\section{control.\+Simulation\+Operational Class Reference}
+\label{classcontrol_1_1_simulation_operational}\index{control.SimulationOperational@{control.SimulationOperational}}
+
+
+Inherits \mbox{\hyperlink{interfacecontrol_1_1_operational_command}{control.\+Operational\+Command}}, and Action\+Listener.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcontrol_1_1_simulation_operational_a05ea4626f887de31e4c40b3ff2e52162}{Simulation\+Operational}} (J\+Text\+Field \mbox{\hyperlink{classcontrol_1_1_simulation_operational_a0bc5bcb8d7007bfcca3cf0e204dfce5f}{state}}, J\+Text\+Field \mbox{\hyperlink{classcontrol_1_1_simulation_operational_ad41ae86e7cedc53680f57db31321c34f}{floor}}, int \mbox{\hyperlink{classcontrol_1_1_simulation_operational_a8b244e8cd89afb3060e4025c76f3ccc1}{num\+Floor}}, \mbox{\hyperlink{interfacecontrol_1_1_command_control}{Command\+Control}} \mbox{\hyperlink{classcontrol_1_1_simulation_operational_a381628f543ab9b586023f718af9a279d}{command\+Control}})
+\item 
+void \mbox{\hyperlink{classcontrol_1_1_simulation_operational_a1d385c1f369eb3aff538c36b5947f8ed}{emergency\+Break}} ()
+\item 
+void \mbox{\hyperlink{classcontrol_1_1_simulation_operational_a66881a9f2cf8526dee93b756f8ad47af}{acquit}} ()
+\item 
+void \mbox{\hyperlink{classcontrol_1_1_simulation_operational_a2ca8414424f8becf5c5942b9dbba80aa}{stop\+Next\+Floor}} ()
+\item 
+void \mbox{\hyperlink{classcontrol_1_1_simulation_operational_ab3ade4511703ee9715f82ce6e9a036a0}{up}} ()
+\item 
+void \mbox{\hyperlink{classcontrol_1_1_simulation_operational_a67c7dc0ec1b837a8174d127cb6803eb9}{down}} ()
+\item 
+void \mbox{\hyperlink{classcontrol_1_1_simulation_operational_a9cce36fe391bc34c0b5bdbbef9244f05}{action\+Performed}} (Action\+Event e)
+\item 
+void \mbox{\hyperlink{classcontrol_1_1_simulation_operational_a66fd6c0df3888639296a867c106590e3}{set\+Command\+Control}} (\mbox{\hyperlink{interfacecontrol_1_1_command_control}{Command\+Control}} \mbox{\hyperlink{classcontrol_1_1_simulation_operational_a381628f543ab9b586023f718af9a279d}{command\+Control}})
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+J\+Text\+Field \mbox{\hyperlink{classcontrol_1_1_simulation_operational_a0bc5bcb8d7007bfcca3cf0e204dfce5f}{state}}
+\item 
+J\+Text\+Field \mbox{\hyperlink{classcontrol_1_1_simulation_operational_ad41ae86e7cedc53680f57db31321c34f}{floor}}
+\item 
+int \mbox{\hyperlink{classcontrol_1_1_simulation_operational_a8b244e8cd89afb3060e4025c76f3ccc1}{num\+Floor}}
+\item 
+\mbox{\hyperlink{enumcontrol_1_1command_1_1_direction}{Direction}} \mbox{\hyperlink{classcontrol_1_1_simulation_operational_acd8854111b611282faba5ff24d894b53}{direction}}
+\item 
+boolean \mbox{\hyperlink{classcontrol_1_1_simulation_operational_acda8346b0a85916ca536b13bcb704b33}{stop\+Next}}
+\item 
+\mbox{\hyperlink{interfacecontrol_1_1_command_control}{Command\+Control}} \mbox{\hyperlink{classcontrol_1_1_simulation_operational_a381628f543ab9b586023f718af9a279d}{command\+Control}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcontrol_1_1_simulation_operational_a05ea4626f887de31e4c40b3ff2e52162}\label{classcontrol_1_1_simulation_operational_a05ea4626f887de31e4c40b3ff2e52162}} 
+\index{control.SimulationOperational@{control.SimulationOperational}!SimulationOperational@{SimulationOperational}}
+\index{SimulationOperational@{SimulationOperational}!control.SimulationOperational@{control.SimulationOperational}}
+\subsubsection{\texorpdfstring{SimulationOperational()}{SimulationOperational()}}
+{\footnotesize\ttfamily control.\+Simulation\+Operational.\+Simulation\+Operational (\begin{DoxyParamCaption}\item[{J\+Text\+Field}]{state,  }\item[{J\+Text\+Field}]{floor,  }\item[{int}]{num\+Floor,  }\item[{\mbox{\hyperlink{interfacecontrol_1_1_command_control}{Command\+Control}}}]{command\+Control }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcontrol_1_1_simulation_operational_a66881a9f2cf8526dee93b756f8ad47af}\label{classcontrol_1_1_simulation_operational_a66881a9f2cf8526dee93b756f8ad47af}} 
+\index{control.SimulationOperational@{control.SimulationOperational}!acquit@{acquit}}
+\index{acquit@{acquit}!control.SimulationOperational@{control.SimulationOperational}}
+\subsubsection{\texorpdfstring{acquit()}{acquit()}}
+{\footnotesize\ttfamily void control.\+Simulation\+Operational.\+acquit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interfacecontrol_1_1_operational_command_ab48776483b91f60855a69d7671e02446}{control.\+Operational\+Command}}.
+
+\mbox{\Hypertarget{classcontrol_1_1_simulation_operational_a9cce36fe391bc34c0b5bdbbef9244f05}\label{classcontrol_1_1_simulation_operational_a9cce36fe391bc34c0b5bdbbef9244f05}} 
+\index{control.SimulationOperational@{control.SimulationOperational}!actionPerformed@{actionPerformed}}
+\index{actionPerformed@{actionPerformed}!control.SimulationOperational@{control.SimulationOperational}}
+\subsubsection{\texorpdfstring{actionPerformed()}{actionPerformed()}}
+{\footnotesize\ttfamily void control.\+Simulation\+Operational.\+action\+Performed (\begin{DoxyParamCaption}\item[{Action\+Event}]{e }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcontrol_1_1_simulation_operational_a67c7dc0ec1b837a8174d127cb6803eb9}\label{classcontrol_1_1_simulation_operational_a67c7dc0ec1b837a8174d127cb6803eb9}} 
+\index{control.SimulationOperational@{control.SimulationOperational}!down@{down}}
+\index{down@{down}!control.SimulationOperational@{control.SimulationOperational}}
+\subsubsection{\texorpdfstring{down()}{down()}}
+{\footnotesize\ttfamily void control.\+Simulation\+Operational.\+down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interfacecontrol_1_1_operational_command_a3d1ecf1ec7ad55a3f3e02d2fc9df7e18}{control.\+Operational\+Command}}.
+
+\mbox{\Hypertarget{classcontrol_1_1_simulation_operational_a1d385c1f369eb3aff538c36b5947f8ed}\label{classcontrol_1_1_simulation_operational_a1d385c1f369eb3aff538c36b5947f8ed}} 
+\index{control.SimulationOperational@{control.SimulationOperational}!emergencyBreak@{emergencyBreak}}
+\index{emergencyBreak@{emergencyBreak}!control.SimulationOperational@{control.SimulationOperational}}
+\subsubsection{\texorpdfstring{emergencyBreak()}{emergencyBreak()}}
+{\footnotesize\ttfamily void control.\+Simulation\+Operational.\+emergency\+Break (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interfacecontrol_1_1_operational_command_a63858b26e71770bb4ae232277d54b8a6}{control.\+Operational\+Command}}.
+
+\mbox{\Hypertarget{classcontrol_1_1_simulation_operational_a66fd6c0df3888639296a867c106590e3}\label{classcontrol_1_1_simulation_operational_a66fd6c0df3888639296a867c106590e3}} 
+\index{control.SimulationOperational@{control.SimulationOperational}!setCommandControl@{setCommandControl}}
+\index{setCommandControl@{setCommandControl}!control.SimulationOperational@{control.SimulationOperational}}
+\subsubsection{\texorpdfstring{setCommandControl()}{setCommandControl()}}
+{\footnotesize\ttfamily void control.\+Simulation\+Operational.\+set\+Command\+Control (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfacecontrol_1_1_command_control}{Command\+Control}}}]{command\+Control }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcontrol_1_1_simulation_operational_a2ca8414424f8becf5c5942b9dbba80aa}\label{classcontrol_1_1_simulation_operational_a2ca8414424f8becf5c5942b9dbba80aa}} 
+\index{control.SimulationOperational@{control.SimulationOperational}!stopNextFloor@{stopNextFloor}}
+\index{stopNextFloor@{stopNextFloor}!control.SimulationOperational@{control.SimulationOperational}}
+\subsubsection{\texorpdfstring{stopNextFloor()}{stopNextFloor()}}
+{\footnotesize\ttfamily void control.\+Simulation\+Operational.\+stop\+Next\+Floor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interfacecontrol_1_1_operational_command_a148c09334384843727fb7b1665252ff1}{control.\+Operational\+Command}}.
+
+\mbox{\Hypertarget{classcontrol_1_1_simulation_operational_ab3ade4511703ee9715f82ce6e9a036a0}\label{classcontrol_1_1_simulation_operational_ab3ade4511703ee9715f82ce6e9a036a0}} 
+\index{control.SimulationOperational@{control.SimulationOperational}!up@{up}}
+\index{up@{up}!control.SimulationOperational@{control.SimulationOperational}}
+\subsubsection{\texorpdfstring{up()}{up()}}
+{\footnotesize\ttfamily void control.\+Simulation\+Operational.\+up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interfacecontrol_1_1_operational_command_a23231ea40f8bf5cd07b864238f258b5f}{control.\+Operational\+Command}}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classcontrol_1_1_simulation_operational_a381628f543ab9b586023f718af9a279d}\label{classcontrol_1_1_simulation_operational_a381628f543ab9b586023f718af9a279d}} 
+\index{control.SimulationOperational@{control.SimulationOperational}!commandControl@{commandControl}}
+\index{commandControl@{commandControl}!control.SimulationOperational@{control.SimulationOperational}}
+\subsubsection{\texorpdfstring{commandControl}{commandControl}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interfacecontrol_1_1_command_control}{Command\+Control}} control.\+Simulation\+Operational.\+command\+Control\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcontrol_1_1_simulation_operational_acd8854111b611282faba5ff24d894b53}\label{classcontrol_1_1_simulation_operational_acd8854111b611282faba5ff24d894b53}} 
+\index{control.SimulationOperational@{control.SimulationOperational}!direction@{direction}}
+\index{direction@{direction}!control.SimulationOperational@{control.SimulationOperational}}
+\subsubsection{\texorpdfstring{direction}{direction}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enumcontrol_1_1command_1_1_direction}{Direction}} control.\+Simulation\+Operational.\+direction\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcontrol_1_1_simulation_operational_ad41ae86e7cedc53680f57db31321c34f}\label{classcontrol_1_1_simulation_operational_ad41ae86e7cedc53680f57db31321c34f}} 
+\index{control.SimulationOperational@{control.SimulationOperational}!floor@{floor}}
+\index{floor@{floor}!control.SimulationOperational@{control.SimulationOperational}}
+\subsubsection{\texorpdfstring{floor}{floor}}
+{\footnotesize\ttfamily J\+Text\+Field control.\+Simulation\+Operational.\+floor\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcontrol_1_1_simulation_operational_a8b244e8cd89afb3060e4025c76f3ccc1}\label{classcontrol_1_1_simulation_operational_a8b244e8cd89afb3060e4025c76f3ccc1}} 
+\index{control.SimulationOperational@{control.SimulationOperational}!numFloor@{numFloor}}
+\index{numFloor@{numFloor}!control.SimulationOperational@{control.SimulationOperational}}
+\subsubsection{\texorpdfstring{numFloor}{numFloor}}
+{\footnotesize\ttfamily int control.\+Simulation\+Operational.\+num\+Floor\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcontrol_1_1_simulation_operational_a0bc5bcb8d7007bfcca3cf0e204dfce5f}\label{classcontrol_1_1_simulation_operational_a0bc5bcb8d7007bfcca3cf0e204dfce5f}} 
+\index{control.SimulationOperational@{control.SimulationOperational}!state@{state}}
+\index{state@{state}!control.SimulationOperational@{control.SimulationOperational}}
+\subsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily J\+Text\+Field control.\+Simulation\+Operational.\+state\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcontrol_1_1_simulation_operational_acda8346b0a85916ca536b13bcb704b33}\label{classcontrol_1_1_simulation_operational_acda8346b0a85916ca536b13bcb704b33}} 
+\index{control.SimulationOperational@{control.SimulationOperational}!stopNext@{stopNext}}
+\index{stopNext@{stopNext}!control.SimulationOperational@{control.SimulationOperational}}
+\subsubsection{\texorpdfstring{stopNext}{stopNext}}
+{\footnotesize\ttfamily boolean control.\+Simulation\+Operational.\+stop\+Next\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+control/\mbox{\hyperlink{_simulation_operational_8java}{Simulation\+Operational.\+java}}\end{DoxyCompactItemize}

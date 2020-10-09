@@ -1,0 +1,214 @@
+\hypertarget{classcontrol_1_1_impl_command_control}{}\section{control.\+Impl\+Command\+Control Class Reference}
+\label{classcontrol_1_1_impl_command_control}\index{control.ImplCommandControl@{control.ImplCommandControl}}
+
+
+Inherits \mbox{\hyperlink{interfacecontrol_1_1_command_control}{control.\+Command\+Control}}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcontrol_1_1_impl_command_control_ae6bd16309a6cd954c9dd44244ed6cdd3}{Impl\+Command\+Control}} (int \mbox{\hyperlink{classcontrol_1_1_impl_command_control_acbd6195b1d21b55b2c9c96d144f98671}{floor}}, \mbox{\hyperlink{interfacecontrol_1_1_operational_command}{Operational\+Command}} \mbox{\hyperlink{classcontrol_1_1_impl_command_control_adbe2ee9057a11e4d2408947f5ff83cd5}{operational\+Command}})
+\item 
+\mbox{\hyperlink{classcontrol_1_1_impl_command_control_a57ac3479e6a08c522404266b3078db16}{Impl\+Command\+Control}} (int \mbox{\hyperlink{classcontrol_1_1_impl_command_control_acbd6195b1d21b55b2c9c96d144f98671}{floor}}, Navigable\+Set$<$ \mbox{\hyperlink{classcontrol_1_1command_1_1_floor_request}{Floor\+Request}} $>$ \mbox{\hyperlink{classcontrol_1_1_impl_command_control_afc3d3dfd36511a07dd41e717df3b13f9}{commands}}, \mbox{\hyperlink{interfacecontrol_1_1_operational_command}{Operational\+Command}} \mbox{\hyperlink{classcontrol_1_1_impl_command_control_adbe2ee9057a11e4d2408947f5ff83cd5}{operational\+Command}})
+\item 
+\mbox{\hyperlink{classcontrol_1_1_impl_command_control_a384f52aa39c3a5745b9143d6763e36a9}{Impl\+Command\+Control}} (int \mbox{\hyperlink{classcontrol_1_1_impl_command_control_acbd6195b1d21b55b2c9c96d144f98671}{floor}}, Comparator$<$ \mbox{\hyperlink{classcontrol_1_1command_1_1_floor_request}{Floor\+Request}} $>$ request\+Comparator, \mbox{\hyperlink{interfacecontrol_1_1_operational_command}{Operational\+Command}} \mbox{\hyperlink{classcontrol_1_1_impl_command_control_adbe2ee9057a11e4d2408947f5ff83cd5}{operational\+Command}})
+\item 
+void \mbox{\hyperlink{classcontrol_1_1_impl_command_control_a5736ac91cdc39805dc27c6af0c9935cb}{reach\+Floor}} (int \mbox{\hyperlink{classcontrol_1_1_impl_command_control_acbd6195b1d21b55b2c9c96d144f98671}{floor}})
+\item 
+void \mbox{\hyperlink{classcontrol_1_1_impl_command_control_a992b195b4521cba044f235fa35f6a9b2}{add\+Floor\+Request}} (\mbox{\hyperlink{classcontrol_1_1command_1_1_floor_request}{Floor\+Request}} floor\+Request)
+\item 
+void \mbox{\hyperlink{classcontrol_1_1_impl_command_control_a1a3e2202d967016c70f6c7e2105fc4c7}{emergency\+Break}} (\mbox{\hyperlink{classcontrol_1_1command_1_1_emergency_brake}{Emergency\+Brake}} emergency\+Brake)
+\item 
+void \mbox{\hyperlink{classcontrol_1_1_impl_command_control_a18ba4e8d7e7b6ebfec099c22f58d55d1}{acquit}} (\mbox{\hyperlink{classcontrol_1_1command_1_1_acquit}{Acquit}} acquit)
+\item 
+int \mbox{\hyperlink{classcontrol_1_1_impl_command_control_a03e231769f2023d9f381980a34057ad6}{get\+Floor}} ()
+\item 
+\mbox{\hyperlink{enumcontrol_1_1command_1_1_direction}{Direction}} \mbox{\hyperlink{classcontrol_1_1_impl_command_control_a9734880304099b72e4a65dbfe6a510a1}{get\+Direction}} ()
+\item 
+void \mbox{\hyperlink{classcontrol_1_1_impl_command_control_a5e4e08d530f169cec15f32d60255ac1c}{set\+Enable}} (boolean \mbox{\hyperlink{classcontrol_1_1_impl_command_control_a80ffb0738b94ae89c8b32d60f9f2fcd0}{enable}})
+\item 
+void \mbox{\hyperlink{classcontrol_1_1_impl_command_control_a4a32b15e589ca6ad5be4d6288f73d0d6}{set\+Commands}} (Navigable\+Set$<$ \mbox{\hyperlink{classcontrol_1_1command_1_1_floor_request}{Floor\+Request}} $>$ \mbox{\hyperlink{classcontrol_1_1_impl_command_control_afc3d3dfd36511a07dd41e717df3b13f9}{commands}})
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcontrol_1_1_impl_command_control_abba34b3a552395174ddc686b4e3136dd}{evaluate\+Command}} ()
+\item 
+void \mbox{\hyperlink{classcontrol_1_1_impl_command_control_a122541d8e0d77a6d9ef62a1ee5391ee9}{set\+Direction}} (\mbox{\hyperlink{enumcontrol_1_1command_1_1_direction}{Direction}} \mbox{\hyperlink{classcontrol_1_1_impl_command_control_ae982796e5a99ef48f6b9db87ddb82ad7}{direction}})
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boolean \mbox{\hyperlink{classcontrol_1_1_impl_command_control_a80ffb0738b94ae89c8b32d60f9f2fcd0}{enable}}
+\begin{DoxyCompactList}\small\item\em Booléen permettant de bloquer ou débloqué l\textquotesingle{}ascenseur. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classcontrol_1_1_impl_command_control_acbd6195b1d21b55b2c9c96d144f98671}{floor}}
+\begin{DoxyCompactList}\small\item\em Etage où se trouve l\textquotesingle{}ascenseur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{enumcontrol_1_1command_1_1_direction}{Direction}} \mbox{\hyperlink{classcontrol_1_1_impl_command_control_ae982796e5a99ef48f6b9db87ddb82ad7}{direction}}
+\begin{DoxyCompactList}\small\item\em Le sens dans lequel va l\textquotesingle{}ascenseur. \end{DoxyCompactList}\item 
+Navigable\+Set$<$ \mbox{\hyperlink{classcontrol_1_1command_1_1_floor_request}{Floor\+Request}} $>$ \mbox{\hyperlink{classcontrol_1_1_impl_command_control_afc3d3dfd36511a07dd41e717df3b13f9}{commands}}
+\item 
+final \mbox{\hyperlink{interfacecontrol_1_1_operational_command}{Operational\+Command}} \mbox{\hyperlink{classcontrol_1_1_impl_command_control_adbe2ee9057a11e4d2408947f5ff83cd5}{operational\+Command}}
+\begin{DoxyCompactList}\small\item\em L\textquotesingle{}action demandé par l\textquotesingle{}utilisateur \mbox{\hyperlink{namespacecontrol_1_1command}{command}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcontrol_1_1_impl_command_control_ae6bd16309a6cd954c9dd44244ed6cdd3}\label{classcontrol_1_1_impl_command_control_ae6bd16309a6cd954c9dd44244ed6cdd3}} 
+\index{control.ImplCommandControl@{control.ImplCommandControl}!ImplCommandControl@{ImplCommandControl}}
+\index{ImplCommandControl@{ImplCommandControl}!control.ImplCommandControl@{control.ImplCommandControl}}
+\subsubsection{\texorpdfstring{ImplCommandControl()}{ImplCommandControl()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily control.\+Impl\+Command\+Control.\+Impl\+Command\+Control (\begin{DoxyParamCaption}\item[{int}]{floor,  }\item[{\mbox{\hyperlink{interfacecontrol_1_1_operational_command}{Operational\+Command}}}]{operational\+Command }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcontrol_1_1_impl_command_control_a57ac3479e6a08c522404266b3078db16}\label{classcontrol_1_1_impl_command_control_a57ac3479e6a08c522404266b3078db16}} 
+\index{control.ImplCommandControl@{control.ImplCommandControl}!ImplCommandControl@{ImplCommandControl}}
+\index{ImplCommandControl@{ImplCommandControl}!control.ImplCommandControl@{control.ImplCommandControl}}
+\subsubsection{\texorpdfstring{ImplCommandControl()}{ImplCommandControl()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily control.\+Impl\+Command\+Control.\+Impl\+Command\+Control (\begin{DoxyParamCaption}\item[{int}]{floor,  }\item[{Navigable\+Set$<$ \mbox{\hyperlink{classcontrol_1_1command_1_1_floor_request}{Floor\+Request}} $>$}]{commands,  }\item[{\mbox{\hyperlink{interfacecontrol_1_1_operational_command}{Operational\+Command}}}]{operational\+Command }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcontrol_1_1_impl_command_control_a384f52aa39c3a5745b9143d6763e36a9}\label{classcontrol_1_1_impl_command_control_a384f52aa39c3a5745b9143d6763e36a9}} 
+\index{control.ImplCommandControl@{control.ImplCommandControl}!ImplCommandControl@{ImplCommandControl}}
+\index{ImplCommandControl@{ImplCommandControl}!control.ImplCommandControl@{control.ImplCommandControl}}
+\subsubsection{\texorpdfstring{ImplCommandControl()}{ImplCommandControl()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily control.\+Impl\+Command\+Control.\+Impl\+Command\+Control (\begin{DoxyParamCaption}\item[{int}]{floor,  }\item[{Comparator$<$ \mbox{\hyperlink{classcontrol_1_1command_1_1_floor_request}{Floor\+Request}} $>$}]{request\+Comparator,  }\item[{\mbox{\hyperlink{interfacecontrol_1_1_operational_command}{Operational\+Command}}}]{operational\+Command }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcontrol_1_1_impl_command_control_a18ba4e8d7e7b6ebfec099c22f58d55d1}\label{classcontrol_1_1_impl_command_control_a18ba4e8d7e7b6ebfec099c22f58d55d1}} 
+\index{control.ImplCommandControl@{control.ImplCommandControl}!acquit@{acquit}}
+\index{acquit@{acquit}!control.ImplCommandControl@{control.ImplCommandControl}}
+\subsubsection{\texorpdfstring{acquit()}{acquit()}}
+{\footnotesize\ttfamily void control.\+Impl\+Command\+Control.\+acquit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcontrol_1_1command_1_1_acquit}{Acquit}}}]{acquit }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interfacecontrol_1_1_command_control_a7eb9b7d638a4680fdf89453ca16a6c93}{control.\+Command\+Control}}.
+
+\mbox{\Hypertarget{classcontrol_1_1_impl_command_control_a992b195b4521cba044f235fa35f6a9b2}\label{classcontrol_1_1_impl_command_control_a992b195b4521cba044f235fa35f6a9b2}} 
+\index{control.ImplCommandControl@{control.ImplCommandControl}!addFloorRequest@{addFloorRequest}}
+\index{addFloorRequest@{addFloorRequest}!control.ImplCommandControl@{control.ImplCommandControl}}
+\subsubsection{\texorpdfstring{addFloorRequest()}{addFloorRequest()}}
+{\footnotesize\ttfamily void control.\+Impl\+Command\+Control.\+add\+Floor\+Request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcontrol_1_1command_1_1_floor_request}{Floor\+Request}}}]{floor\+Request }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interfacecontrol_1_1_command_control_addb1fea724cbd015456ac62a1dcf556d}{control.\+Command\+Control}}.
+
+\mbox{\Hypertarget{classcontrol_1_1_impl_command_control_a1a3e2202d967016c70f6c7e2105fc4c7}\label{classcontrol_1_1_impl_command_control_a1a3e2202d967016c70f6c7e2105fc4c7}} 
+\index{control.ImplCommandControl@{control.ImplCommandControl}!emergencyBreak@{emergencyBreak}}
+\index{emergencyBreak@{emergencyBreak}!control.ImplCommandControl@{control.ImplCommandControl}}
+\subsubsection{\texorpdfstring{emergencyBreak()}{emergencyBreak()}}
+{\footnotesize\ttfamily void control.\+Impl\+Command\+Control.\+emergency\+Break (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcontrol_1_1command_1_1_emergency_brake}{Emergency\+Brake}}}]{emergency\+Brake }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interfacecontrol_1_1_command_control_a9a32457770712105c8ceffab1c05b95a}{control.\+Command\+Control}}.
+
+\mbox{\Hypertarget{classcontrol_1_1_impl_command_control_abba34b3a552395174ddc686b4e3136dd}\label{classcontrol_1_1_impl_command_control_abba34b3a552395174ddc686b4e3136dd}} 
+\index{control.ImplCommandControl@{control.ImplCommandControl}!evaluateCommand@{evaluateCommand}}
+\index{evaluateCommand@{evaluateCommand}!control.ImplCommandControl@{control.ImplCommandControl}}
+\subsubsection{\texorpdfstring{evaluateCommand()}{evaluateCommand()}}
+{\footnotesize\ttfamily void control.\+Impl\+Command\+Control.\+evaluate\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcontrol_1_1_impl_command_control_a9734880304099b72e4a65dbfe6a510a1}\label{classcontrol_1_1_impl_command_control_a9734880304099b72e4a65dbfe6a510a1}} 
+\index{control.ImplCommandControl@{control.ImplCommandControl}!getDirection@{getDirection}}
+\index{getDirection@{getDirection}!control.ImplCommandControl@{control.ImplCommandControl}}
+\subsubsection{\texorpdfstring{getDirection()}{getDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enumcontrol_1_1command_1_1_direction}{Direction}} control.\+Impl\+Command\+Control.\+get\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interfacecontrol_1_1_command_control_af668873aadd297c71867fa707b5ecd55}{control.\+Command\+Control}}.
+
+\mbox{\Hypertarget{classcontrol_1_1_impl_command_control_a03e231769f2023d9f381980a34057ad6}\label{classcontrol_1_1_impl_command_control_a03e231769f2023d9f381980a34057ad6}} 
+\index{control.ImplCommandControl@{control.ImplCommandControl}!getFloor@{getFloor}}
+\index{getFloor@{getFloor}!control.ImplCommandControl@{control.ImplCommandControl}}
+\subsubsection{\texorpdfstring{getFloor()}{getFloor()}}
+{\footnotesize\ttfamily int control.\+Impl\+Command\+Control.\+get\+Floor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interfacecontrol_1_1_command_control_abfefcf986aceb87768275e04df3653f5}{control.\+Command\+Control}}.
+
+\mbox{\Hypertarget{classcontrol_1_1_impl_command_control_a5736ac91cdc39805dc27c6af0c9935cb}\label{classcontrol_1_1_impl_command_control_a5736ac91cdc39805dc27c6af0c9935cb}} 
+\index{control.ImplCommandControl@{control.ImplCommandControl}!reachFloor@{reachFloor}}
+\index{reachFloor@{reachFloor}!control.ImplCommandControl@{control.ImplCommandControl}}
+\subsubsection{\texorpdfstring{reachFloor()}{reachFloor()}}
+{\footnotesize\ttfamily void control.\+Impl\+Command\+Control.\+reach\+Floor (\begin{DoxyParamCaption}\item[{int}]{floor }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interfacecontrol_1_1_command_control_aed88af210353f0e854d6da8af1089851}{control.\+Command\+Control}}.
+
+\mbox{\Hypertarget{classcontrol_1_1_impl_command_control_a4a32b15e589ca6ad5be4d6288f73d0d6}\label{classcontrol_1_1_impl_command_control_a4a32b15e589ca6ad5be4d6288f73d0d6}} 
+\index{control.ImplCommandControl@{control.ImplCommandControl}!setCommands@{setCommands}}
+\index{setCommands@{setCommands}!control.ImplCommandControl@{control.ImplCommandControl}}
+\subsubsection{\texorpdfstring{setCommands()}{setCommands()}}
+{\footnotesize\ttfamily void control.\+Impl\+Command\+Control.\+set\+Commands (\begin{DoxyParamCaption}\item[{Navigable\+Set$<$ \mbox{\hyperlink{classcontrol_1_1command_1_1_floor_request}{Floor\+Request}} $>$}]{commands }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcontrol_1_1_impl_command_control_a122541d8e0d77a6d9ef62a1ee5391ee9}\label{classcontrol_1_1_impl_command_control_a122541d8e0d77a6d9ef62a1ee5391ee9}} 
+\index{control.ImplCommandControl@{control.ImplCommandControl}!setDirection@{setDirection}}
+\index{setDirection@{setDirection}!control.ImplCommandControl@{control.ImplCommandControl}}
+\subsubsection{\texorpdfstring{setDirection()}{setDirection()}}
+{\footnotesize\ttfamily void control.\+Impl\+Command\+Control.\+set\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enumcontrol_1_1command_1_1_direction}{Direction}}}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcontrol_1_1_impl_command_control_a5e4e08d530f169cec15f32d60255ac1c}\label{classcontrol_1_1_impl_command_control_a5e4e08d530f169cec15f32d60255ac1c}} 
+\index{control.ImplCommandControl@{control.ImplCommandControl}!setEnable@{setEnable}}
+\index{setEnable@{setEnable}!control.ImplCommandControl@{control.ImplCommandControl}}
+\subsubsection{\texorpdfstring{setEnable()}{setEnable()}}
+{\footnotesize\ttfamily void control.\+Impl\+Command\+Control.\+set\+Enable (\begin{DoxyParamCaption}\item[{boolean}]{enable }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classcontrol_1_1_impl_command_control_afc3d3dfd36511a07dd41e717df3b13f9}\label{classcontrol_1_1_impl_command_control_afc3d3dfd36511a07dd41e717df3b13f9}} 
+\index{control.ImplCommandControl@{control.ImplCommandControl}!commands@{commands}}
+\index{commands@{commands}!control.ImplCommandControl@{control.ImplCommandControl}}
+\subsubsection{\texorpdfstring{commands}{commands}}
+{\footnotesize\ttfamily Navigable\+Set$<$\mbox{\hyperlink{classcontrol_1_1command_1_1_floor_request}{Floor\+Request}}$>$ control.\+Impl\+Command\+Control.\+commands\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcontrol_1_1_impl_command_control_ae982796e5a99ef48f6b9db87ddb82ad7}\label{classcontrol_1_1_impl_command_control_ae982796e5a99ef48f6b9db87ddb82ad7}} 
+\index{control.ImplCommandControl@{control.ImplCommandControl}!direction@{direction}}
+\index{direction@{direction}!control.ImplCommandControl@{control.ImplCommandControl}}
+\subsubsection{\texorpdfstring{direction}{direction}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enumcontrol_1_1command_1_1_direction}{Direction}} control.\+Impl\+Command\+Control.\+direction\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Le sens dans lequel va l\textquotesingle{}ascenseur. 
+
+\mbox{\Hypertarget{classcontrol_1_1_impl_command_control_a80ffb0738b94ae89c8b32d60f9f2fcd0}\label{classcontrol_1_1_impl_command_control_a80ffb0738b94ae89c8b32d60f9f2fcd0}} 
+\index{control.ImplCommandControl@{control.ImplCommandControl}!enable@{enable}}
+\index{enable@{enable}!control.ImplCommandControl@{control.ImplCommandControl}}
+\subsubsection{\texorpdfstring{enable}{enable}}
+{\footnotesize\ttfamily boolean control.\+Impl\+Command\+Control.\+enable\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Booléen permettant de bloquer ou débloqué l\textquotesingle{}ascenseur. 
+
+\mbox{\Hypertarget{classcontrol_1_1_impl_command_control_acbd6195b1d21b55b2c9c96d144f98671}\label{classcontrol_1_1_impl_command_control_acbd6195b1d21b55b2c9c96d144f98671}} 
+\index{control.ImplCommandControl@{control.ImplCommandControl}!floor@{floor}}
+\index{floor@{floor}!control.ImplCommandControl@{control.ImplCommandControl}}
+\subsubsection{\texorpdfstring{floor}{floor}}
+{\footnotesize\ttfamily int control.\+Impl\+Command\+Control.\+floor\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Etage où se trouve l\textquotesingle{}ascenseur. 
+
+\mbox{\Hypertarget{classcontrol_1_1_impl_command_control_adbe2ee9057a11e4d2408947f5ff83cd5}\label{classcontrol_1_1_impl_command_control_adbe2ee9057a11e4d2408947f5ff83cd5}} 
+\index{control.ImplCommandControl@{control.ImplCommandControl}!operationalCommand@{operationalCommand}}
+\index{operationalCommand@{operationalCommand}!control.ImplCommandControl@{control.ImplCommandControl}}
+\subsubsection{\texorpdfstring{operationalCommand}{operationalCommand}}
+{\footnotesize\ttfamily final \mbox{\hyperlink{interfacecontrol_1_1_operational_command}{Operational\+Command}} control.\+Impl\+Command\+Control.\+operational\+Command\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+L\textquotesingle{}action demandé par l\textquotesingle{}utilisateur \mbox{\hyperlink{namespacecontrol_1_1command}{command}}. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+control/\mbox{\hyperlink{_impl_command_control_8java}{Impl\+Command\+Control.\+java}}\end{DoxyCompactItemize}

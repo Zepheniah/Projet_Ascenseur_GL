@@ -1,7 +1,6 @@
 var classcontrol_1_1command_1_1_floor_request =
 [
     [ "FloorRequest", "classcontrol_1_1command_1_1_floor_request.html#a03685a59d9f54c5057713039fa580369", null ],
-    [ "accept", "classcontrol_1_1command_1_1_floor_request.html#a89db76c1649b41ee844fb79898ce4de2", null ],
     [ "getDirection", "classcontrol_1_1command_1_1_floor_request.html#ad0e7950407e9e15e4a3be8927f1e3408", null ],
     [ "getFloor", "classcontrol_1_1command_1_1_floor_request.html#a752d0cf165ba8d1033b9d8ca6b4c4d3e", null ],
     [ "direction", "classcontrol_1_1command_1_1_floor_request.html#a0d1e1a3a816acba02789469f4e46a5d1", null ],

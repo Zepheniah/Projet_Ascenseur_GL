@@ -1,15 +1,13 @@
 \hypertarget{classcontrol_1_1_simulation_operational}{}\section{control.\+Simulation\+Operational Class Reference}
 \label{classcontrol_1_1_simulation_operational}\index{control.SimulationOperational@{control.SimulationOperational}}
-Inheritance diagram for control.\+Simulation\+Operational\+:\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[height=2.000000cm]{classcontrol_1_1_simulation_operational}
-\end{center}
-\end{figure}
+
+
+Inherits \mbox{\hyperlink{interfacecontrol_1_1_operational_command}{control.\+Operational\+Command}}, and Action\+Listener.
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classcontrol_1_1_simulation_operational_a05ea4626f887de31e4c40b3ff2e52162}{Simulation\+Operational}} (J\+Text\+Field \mbox{\hyperlink{classcontrol_1_1_simulation_operational_a0bc5bcb8d7007bfcca3cf0e204dfce5f}{state}}, J\+Text\+Field \mbox{\hyperlink{classcontrol_1_1_simulation_operational_ad41ae86e7cedc53680f57db31321c34f}{floor}}, int \mbox{\hyperlink{classcontrol_1_1_simulation_operational_a8b244e8cd89afb3060e4025c76f3ccc1}{num\+Floor}}, \mbox{\hyperlink{interfacecontrol_1_1_command_control}{Command\+Control}} \mbox{\hyperlink{classcontrol_1_1_simulation_operational_a381628f543ab9b586023f718af9a279d}{command\+Control}})
+\mbox{\hyperlink{classcontrol_1_1_simulation_operational_a05ea4626f887de31e4c40b3ff2e52162}{Simulation\+Operational}} (J\+Text\+Field \mbox{\hyperlink{classcontrol_1_1_simulation_operational_a00a11786ca7a99c8e6ee6b3990300ac6}{state}}, J\+Text\+Field \mbox{\hyperlink{classcontrol_1_1_simulation_operational_a0b981ca8176d219f57d95af4f780699d}{floor}}, int \mbox{\hyperlink{classcontrol_1_1_simulation_operational_a8b244e8cd89afb3060e4025c76f3ccc1}{num\+Floor}}, \mbox{\hyperlink{interfacecontrol_1_1_command_control}{Command\+Control}} \mbox{\hyperlink{classcontrol_1_1_simulation_operational_a381628f543ab9b586023f718af9a279d}{command\+Control}})
 \item 
 void \mbox{\hyperlink{classcontrol_1_1_simulation_operational_a1d385c1f369eb3aff538c36b5947f8ed}{emergency\+Break}} ()
 \item 
@@ -28,12 +26,12 @@ void \mbox{\hyperlink{classcontrol_1_1_simulation_operational_a66fd6c0df38886392
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-J\+Text\+Field \mbox{\hyperlink{classcontrol_1_1_simulation_operational_a0bc5bcb8d7007bfcca3cf0e204dfce5f}{state}}
-\item 
-J\+Text\+Field \mbox{\hyperlink{classcontrol_1_1_simulation_operational_ad41ae86e7cedc53680f57db31321c34f}{floor}}
-\item 
+final J\+Text\+Field \mbox{\hyperlink{classcontrol_1_1_simulation_operational_a00a11786ca7a99c8e6ee6b3990300ac6}{state}}
+\begin{DoxyCompactList}\small\item\em Text qui sera affiché pour communiquer l\textquotesingle{}état de l\textquotesingle{}ascenseur. \end{DoxyCompactList}\item 
+final J\+Text\+Field \mbox{\hyperlink{classcontrol_1_1_simulation_operational_a0b981ca8176d219f57d95af4f780699d}{floor}}
+\begin{DoxyCompactList}\small\item\em Texte communiquant l\textquotesingle{}étage actuelle. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classcontrol_1_1_simulation_operational_a8b244e8cd89afb3060e4025c76f3ccc1}{num\+Floor}}
-\item 
+\begin{DoxyCompactList}\small\item\em Etage actuelle. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{enumcontrol_1_1command_1_1_direction}{Direction}} \mbox{\hyperlink{classcontrol_1_1_simulation_operational_acd8854111b611282faba5ff24d894b53}{direction}}
 \item 
 boolean \mbox{\hyperlink{classcontrol_1_1_simulation_operational_acda8346b0a85916ca536b13bcb704b33}{stop\+Next}}
@@ -129,11 +127,15 @@ Implements \mbox{\hyperlink{interfacecontrol_1_1_operational_command_a23231ea40f
 \subsubsection{\texorpdfstring{direction}{direction}}
 {\footnotesize\ttfamily \mbox{\hyperlink{enumcontrol_1_1command_1_1_direction}{Direction}} control.\+Simulation\+Operational.\+direction\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{classcontrol_1_1_simulation_operational_ad41ae86e7cedc53680f57db31321c34f}\label{classcontrol_1_1_simulation_operational_ad41ae86e7cedc53680f57db31321c34f}} 
+\mbox{\Hypertarget{classcontrol_1_1_simulation_operational_a0b981ca8176d219f57d95af4f780699d}\label{classcontrol_1_1_simulation_operational_a0b981ca8176d219f57d95af4f780699d}} 
 \index{control.SimulationOperational@{control.SimulationOperational}!floor@{floor}}
 \index{floor@{floor}!control.SimulationOperational@{control.SimulationOperational}}
 \subsubsection{\texorpdfstring{floor}{floor}}
-{\footnotesize\ttfamily J\+Text\+Field control.\+Simulation\+Operational.\+floor\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily final J\+Text\+Field control.\+Simulation\+Operational.\+floor\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Texte communiquant l\textquotesingle{}étage actuelle. 
 
 \mbox{\Hypertarget{classcontrol_1_1_simulation_operational_a8b244e8cd89afb3060e4025c76f3ccc1}\label{classcontrol_1_1_simulation_operational_a8b244e8cd89afb3060e4025c76f3ccc1}} 
 \index{control.SimulationOperational@{control.SimulationOperational}!numFloor@{numFloor}}
@@ -141,11 +143,19 @@ Implements \mbox{\hyperlink{interfacecontrol_1_1_operational_command_a23231ea40f
 \subsubsection{\texorpdfstring{numFloor}{numFloor}}
 {\footnotesize\ttfamily int control.\+Simulation\+Operational.\+num\+Floor\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{classcontrol_1_1_simulation_operational_a0bc5bcb8d7007bfcca3cf0e204dfce5f}\label{classcontrol_1_1_simulation_operational_a0bc5bcb8d7007bfcca3cf0e204dfce5f}} 
+
+
+Etage actuelle. 
+
+\mbox{\Hypertarget{classcontrol_1_1_simulation_operational_a00a11786ca7a99c8e6ee6b3990300ac6}\label{classcontrol_1_1_simulation_operational_a00a11786ca7a99c8e6ee6b3990300ac6}} 
 \index{control.SimulationOperational@{control.SimulationOperational}!state@{state}}
 \index{state@{state}!control.SimulationOperational@{control.SimulationOperational}}
 \subsubsection{\texorpdfstring{state}{state}}
-{\footnotesize\ttfamily J\+Text\+Field control.\+Simulation\+Operational.\+state\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily final J\+Text\+Field control.\+Simulation\+Operational.\+state\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Text qui sera affiché pour communiquer l\textquotesingle{}état de l\textquotesingle{}ascenseur. 
 
 \mbox{\Hypertarget{classcontrol_1_1_simulation_operational_acda8346b0a85916ca536b13bcb704b33}\label{classcontrol_1_1_simulation_operational_acda8346b0a85916ca536b13bcb704b33}} 
 \index{control.SimulationOperational@{control.SimulationOperational}!stopNext@{stopNext}}
@@ -157,4 +167,4 @@ Implements \mbox{\hyperlink{interfacecontrol_1_1_operational_command_a23231ea40f
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-control/\mbox{\hyperlink{_simulation_operational_8java}{Simulation\+Operational.\+java}}\end{DoxyCompactItemize}
+src/main/java/control/\mbox{\hyperlink{_simulation_operational_8java}{Simulation\+Operational.\+java}}\end{DoxyCompactItemize}

@@ -10,8 +10,8 @@ var classcontrol_1_1_simulation_operational =
     [ "up", "classcontrol_1_1_simulation_operational.html#ab3ade4511703ee9715f82ce6e9a036a0", null ],
     [ "commandControl", "classcontrol_1_1_simulation_operational.html#a381628f543ab9b586023f718af9a279d", null ],
     [ "direction", "classcontrol_1_1_simulation_operational.html#acd8854111b611282faba5ff24d894b53", null ],
-    [ "floor", "classcontrol_1_1_simulation_operational.html#ad41ae86e7cedc53680f57db31321c34f", null ],
+    [ "floor", "classcontrol_1_1_simulation_operational.html#a0b981ca8176d219f57d95af4f780699d", null ],
     [ "numFloor", "classcontrol_1_1_simulation_operational.html#a8b244e8cd89afb3060e4025c76f3ccc1", null ],
-    [ "state", "classcontrol_1_1_simulation_operational.html#a0bc5bcb8d7007bfcca3cf0e204dfce5f", null ],
+    [ "state", "classcontrol_1_1_simulation_operational.html#a00a11786ca7a99c8e6ee6b3990300ac6", null ],
     [ "stopNext", "classcontrol_1_1_simulation_operational.html#acda8346b0a85916ca536b13bcb704b33", null ]
 ];

@@ -7,6 +7,13 @@ import control.command.EmergencyBrake;
 import control.command.FloorRequest;
 
 public interface CommandControl {
+
+    /**
+     * Fonction qui prends un étage de départ et un étage d'arrivé et qui retourne la direction de l'ascenseur
+     * @param from Etage de départ
+     * @param to Etage d'arrivé
+     * @return Direction de l'ascenseur
+     */
     static Direction floorDirection(int from, int to) {
         return to == from ? Direction.NONE : from < to ? Direction.UP : Direction.DOWN;
     }
